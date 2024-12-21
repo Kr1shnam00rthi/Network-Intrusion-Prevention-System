@@ -1,0 +1,8 @@
+drop tcp any any -> 192.168.43.41 5000 (msg: "SQL Injection Detected"; flow: "to_server"; content: "' or 1=1"; sid: 10002)
+block icmp any any -> 192.168.43.41 any (msg: "Potential ICMP Flood Attack Detected"; threshold: type threshold, track: by_dst, count: 100, seconds: 10; flow: to_server; sid: 10007)
+block udp any any -> 192.168.43.41 any (msg: "Potential UDP Flood Attack Detected"; threshold: type threshold, track: by_src, count: 100, seconds: 10; flow: to_server; sid: 10005)
+block tcp any any -> 192.168.43.41 any (msg: "Potential TCP SYN Flood Attack Detected"; flags: "S"; threshold: type threshold, track: by_src, count: 100, seconds: 10; flow: to_server; sid: 10004)
+drop tcp any any -> 192.168.43.41 5000 (msg: "XSS Attack Detected"; flow: "to_server"; content: "<script>"; sid: 10001)
+block tcp 20.168.20.125 any -> any any (msg: "Blocked Suspicious IP: 20.168.20.125"; flow: to_server; sid: 10003)
+drop tcp any any -> 192.168.43.41 5000 (msg: "HTTP Directory Traversal Attempt Detected"; content: "../"; flow: to_server; sid: 10006)
+alert icmp 192.168.43.41 any -> any any (msg: "Host Made a ping Request"; icode: 0; itype: 8; flow: to_client; sid: 10008)

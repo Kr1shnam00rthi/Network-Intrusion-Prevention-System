@@ -59,7 +59,6 @@ class processPackets(matchRules.matchRules , storeLogs.storeLogs):
             self.TrafficLogs(packet_info)
             result = self.MatchRules(packet_info)
             if result == 1:
-                packet.set_mark(1)
                 packet.drop()
             else:
                 packet.accept()

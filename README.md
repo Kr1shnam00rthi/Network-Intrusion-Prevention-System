@@ -3,7 +3,7 @@
 ### Description
 
 + Developed a Network Intrusion Prevention System (NIPS) in Python, leveraging iptables for dynamic packet filtering, using Scapy for real-time packet inspection, and implementing custom rules for threat detection.
-+ Crafted 8+ custom rules and tested them to detect ICMP flood, UDP flood, TCP SYN flood, SQL injection, XSS, HTTP directory traversal, and suspicious IP blocking, etc.
++ Crafted 10+ custom rules and tested them to detect ICMP flood, UDP flood, TCP SYN flood, SQL injection, XSS, HTTP directory traversal, and suspicious IP blocking, etc.
 + Implemented logging for security events and network activity, enabling detailed analysis and future threat mitigation.
 
 ### Project Structure

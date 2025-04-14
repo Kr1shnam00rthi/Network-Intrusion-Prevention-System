@@ -3,8 +3,9 @@
 import doActions
 import re
 import time
+from collections import OrderedDict
 
-count_ips = {}
+count_ips = OrderedDict()
 
 class matchRules(doActions.doActions):
    
@@ -152,9 +153,10 @@ class matchRules(doActions.doActions):
                if rule_info['track'] == "by_dst":
 
                   if packet_info['destination_ip'] not in count_ips:
+                     if len(count_ips) >= 1000:
+                        count_ips.popitem(last=False)
+                     count_ips[packet_info['destination_ip']] = [1, current_time]
 
-                     count_ips[packet_info['destination_ip']] = [1,current_time]     
-   
                   else:
                   
                      count_ips[packet_info['destination_ip']][0] += 1
@@ -172,6 +174,8 @@ class matchRules(doActions.doActions):
                if rule_info['track'] == "by_src":
                   
                   if packet_info['source_ip'] not in count_ips:
+                     if len(count_ips) >= 1000:
+                        count_ips.popitem(last=False)
                      count_ips[packet_info['source_ip']] = [1,current_time]          
                   else:
                   

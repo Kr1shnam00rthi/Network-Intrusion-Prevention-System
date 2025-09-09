@@ -4,7 +4,7 @@ Network Intrusion Prevention System (NIPS) with real-time packet inspection, cus
 
 ## Features
 
-+ ```Packet Inspection``` : Inspects network packets in real time to detect and block malicious activities.
++ ```Packet Inspection``` : Inspects network packets in real time to detect and mitigate malicious activities.
 + ```Custom Rules``` : Implements signature-based rules for detecting attacks such as SYN flood, ICMP/UDP floods, SQL injection, XSS, and directory traversal etc.
 + ```Logging``` : Records both attack events and network traffic for monitoring and analysis.
   

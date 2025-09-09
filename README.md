@@ -8,7 +8,7 @@ Network Intrusion Prevention System (NIPS) with real-time packet inspection, att
 + ```Custom Rules``` : Implements signature-based rules for detecting attacks such as SYN flood, ICMP/UDP floods, SQL injection, XSS, and directory traversal etc.
 + ```Logging``` : Records both attack events and network traffic for monitoring and analysis.
   
-### Project Structure
+## Project Structure
 
 + ```main.py``` : Entry point; coordinates all modules.
 + ```processPackets.py``` : Queue and Processes raw network packets to extract key attributes.
@@ -19,7 +19,7 @@ Network Intrusion Prevention System (NIPS) with real-time packet inspection, att
 + ```attackLogs.csv``` : Stores logs of detected attacks.
 + ```trafficLogs.csv``` : Stores logs of analyzed network traffic.
 
-### Installation
+## Installation
  
 ```sh
   sudo apt install iptables

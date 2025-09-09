@@ -1,4 +1,4 @@
-## Network Intrusion Prevention System
+# Network Intrusion Prevention System
 
 Network Intrusion Prevention System (NIPS) with real-time packet inspection, attack detection, custom rule-based mitigation, and detailed logging for analysis.
 

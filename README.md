@@ -1,6 +1,6 @@
 # Network Intrusion Prevention System
 
-Network Intrusion Prevention System (NIPS) with real-time packet inspection, attack detection, custom rule-based mitigation, and detailed logging for analysis.
+Network Intrusion Prevention System (NIPS) with real-time packet inspection, custom rule-based attack detection and mitigation, and detailed logging for analysis.
 
 ## Features
 

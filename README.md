@@ -13,9 +13,9 @@ Network Intrusion Prevention System (NIPS) with real-time packet inspection, cus
 + ```main.py``` : Entry point; coordinates all modules.
 + ```processPackets.py``` : Queue and Processes raw network packets to extract key attributes.
 + ```matchRules.py``` : Matches packet attributes with Custom rules and triggers actions via ```doActions.py```.
-+ ```doActions.py``` : Executes corresponding actions based on detected threats.
++ ```doActions.py``` : Executes corresponding actions based on detected attacks.
 + ```storeLogs.py``` : Stores appropriate logs for various attacks.
-+ ```customRules.txt``` : Contains custom rules for threat detection.
++ ```customRules.txt``` : Contains custom rules based on attacks signature.
 + ```attackLogs.csv``` : Stores logs of detected attacks.
 + ```trafficLogs.csv``` : Stores logs of analyzed network traffic.
 

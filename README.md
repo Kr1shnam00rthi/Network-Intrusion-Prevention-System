@@ -1,11 +1,13 @@
 ## Network Intrusion Prevention System
 
-### Description
+Network Intrusion Prevention System (NIPS) with real-time packet inspection, attack detection, custom rule-based mitigation, and detailed logging for analysis.
 
-+ Developed a Network Intrusion Prevention System (NIPS) in Python, leveraging iptables for dynamic packet filtering, using Scapy for real-time packet inspection, and implementing custom rules for threat detection.
-+ Crafted 10+ custom rules and tested them to detect ICMP flood, UDP flood, TCP SYN flood, SQL injection, XSS, HTTP directory traversal, and suspicious IP blocking, etc.
-+ Implemented logging for security events and network activity, enabling detailed analysis and future threat mitigation.
+## Features
 
++ ```Packet Inspection``` : Inspects network packets in real time to detect and block malicious activities.
++ ```Custom Rules``` : Implements signature-based rules for detecting attacks such as SYN flood, ICMP/UDP floods, SQL injection, XSS, and directory traversal etc.
++ ```Logging``` : Records both attack events and network traffic for monitoring and analysis.
+  
 ### Project Structure
 
 + ```main.py``` : Entry point; coordinates all modules.
